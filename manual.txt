@@ -1,0 +1,16 @@
+VIATRAS PRODUCT MANUAL - VERSION 2.1
+
+CHAPTER 1: SYSTEM OVERVIEW
+The Viatras system is an industrial IoT platform designed for real-time monitoring of manufacturing equipment.
+The system supports up to 500 connected devices per installation.
+Default communication protocol is MQTT over port 1883.
+
+CHAPTER 2: INSTALLATION
+Minimum hardware requirements: 8GB RAM, 4-core CPU, 100GB SSD.
+Installation requires administrator privileges.
+Supported operating systems: Windows Server 2019, Ubuntu 20.04 LTS, RHEL 8.
+
+CHAPTER 3: MAINTENANCE
+Filter replacement must be performed every 90 days.
+System diagnostics should be run weekly using the built-in diagnostic tool.
+Contact support at support@viatras.com for hardware failures.
