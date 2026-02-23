@@ -1,16 +1,236 @@
-VIATRAS PRODUCT MANUAL - VERSION 2.1
+# HUMANIC — Website Documentation
 
-CHAPTER 1: SYSTEM OVERVIEW
-The Viatras system is an industrial IoT platform designed for real-time monitoring of manufacturing equipment.
-The system supports up to 500 connected devices per installation.
-Default communication protocol is MQTT over port 1883.
+## 1. Overview
 
-CHAPTER 2: INSTALLATION
-Minimum hardware requirements: 8GB RAM, 4-core CPU, 100GB SSD.
-Installation requires administrator privileges.
-Supported operating systems: Windows Server 2019, Ubuntu 20.04 LTS, RHEL 8.
+**HUMANIC** is a web-based industrial monitoring and reporting platform designed to manage production orders, monitor machine status, track maintenance, audit operational events, and collect MDE (Manufacturing Data Entry) inputs. The application is organized through a side menu that groups features into functional modules such as Order Creation, Machine Info, Maintenance Info, Logs, MDE Screens, and Reports. Each module contains tables, dashboards, and reports supporting daily operational visibility and decision-making. The system presents both real-time and historical information in a structured, navigable format.
 
-CHAPTER 3: MAINTENANCE
-Filter replacement must be performed every 90 days.
-System diagnostics should be run weekly using the built-in diagnostic tool.
-Contact support at support@viatras.com for hardware failures.
+---
+
+# 2. Navigation Structure (Side Menu)
+
+## 2.1 Side Menu Modules
+
+The HUMANIC side menu provides quick access to all key functional areas of the application. Each menu item opens a dedicated page that contains either interactive tables, KPI cards, graphs, MDE entry screens, or report views. This modular setup ensures users can jump directly to operational tasks like creating and tracking orders, reviewing machine details, or checking logs. The menu is structured to align with typical manufacturing workflows—from planning and execution to monitoring and reporting.
+
+**Modules Included:**
+
+- Order Creation
+- Machine Info
+- Maintenance Info
+- Logs
+- MDE Screens
+- Reports
+
+---
+
+# 3. Order Creation
+
+## 3.1 Purpose
+
+The **Order Creation** module helps users manage current production orders and visualize progress against planning. It includes a detailed table for active orders and a graph comparing produced totals with planned quantities. This section supports production tracking and provides quick visibility into whether output is on schedule. Users can use this view to monitor order completion status and identify deviations early.
+
+---
+
+## 3.2 Current Order Table
+
+### 3.2.1 Description
+
+The **Current Order Table** lists all ongoing or active production orders in a structured grid format. It acts as the primary operational view for tracking what is currently running on the shopfloor. The table is designed to enable quick scanning of order progress, current state, and production-relevant attributes. It supports decision-making for supervisors and planners by consolidating order-level details in one place.
+
+### 3.2.2 Key Data (Placeholder — to be updated with your column list)
+
+- Order identifiers
+- Order status
+- Planned quantity
+- Produced quantity
+- Other order-related fields (as applicable)
+
+---
+
+## 3.3 Produced Total vs Planned Quantity Graph
+
+### 3.3.1 Description
+
+This graph visually compares **Produced Total** against **Planned Quantity** to show progress and performance. It provides a quick trend-style view that helps users understand whether production is meeting targets. The visual comparison makes it easier to identify gaps, delays, or overproduction without scanning multiple rows in the table. This component is meant to complement the Current Order Table with high-level insights.
+
+### 3.3.2 Metrics Shown
+
+- Produced Total
+- Planned Quantity
+
+---
+
+# 4. Machine Info
+
+## 4.1 Purpose
+
+The **Machine Info** module provides a quick overview of all machines through compact information cards. Each card displays key basic machine details at a glance, enabling fast status checking. Users can click a card to open a detailed view for deeper inspection of the selected machine. This section supports quick navigation from fleet-level visibility to machine-level diagnostics and information.
+
+---
+
+## 4.2 Machine Cards (4 Cards)
+
+### 4.2.1 Description
+
+The page contains **four machine information cards**, each representing a machine and showing its basic information. These cards act as interactive shortcuts to machine-specific detail pages. The layout is optimized for quick comparison across machines and helps users identify which machine needs attention. Cards are typically used for summary KPIs, statuses, or static properties depending on the machine configuration.
+
+### 4.2.2 Interaction
+
+- Click on a machine card → opens machine details
+
+---
+
+## 4.3 Machine Details (On Card Click)
+
+### 4.3.1 Description
+
+When a user clicks on a machine card, the system navigates to a detailed view for the selected machine. This detailed page provides expanded machine-specific information beyond the summary card. The detailed view is useful for investigations, maintenance review, and operational checks. It helps ensure users can drill down from overview to granular data in a single workflow.
+
+> **Note:** Share what appears in the details view (sections/fields/tables), and I will document it precisely.
+> 
+
+---
+
+# 5. Maintenance Info
+
+## 5.1 Purpose
+
+The **Maintenance Info** module centralizes maintenance-related tracking through two structured tables. It allows users to review maintenance records (maintenance data) and follow maintenance sequences in an ordered format. This module supports better maintenance planning, execution visibility, and traceability. It provides a consolidated view for both historical and process-based maintenance tracking.
+
+---
+
+## 5.2 Maintenance Data Table
+
+### 5.2.1 Description
+
+The **Maintenance Data Table** provides a tabular overview of maintenance entries and relevant details. It is intended for quickly reviewing maintenance actions, statuses, timestamps, or machine associations. The table supports sorting, scanning, and operational monitoring of maintenance activities. It helps track what maintenance has been performed or is pending across the system.
+
+### 5.2.2 Key Data (Placeholder)
+
+- Maintenance record attributes (to be updated once you share columns)
+
+---
+
+## 5.3 Maintenance Sequence Table
+
+### 5.3.1 Description
+
+The **Maintenance Sequence Table** shows maintenance activities in sequence or step order, enabling users to follow the process flow of maintenance operations. This table supports understanding dependencies, completion order, and workflow alignment. It is useful for tracking progress across multiple steps and ensuring the maintenance process is followed correctly. The sequence view improves clarity compared to a flat list of maintenance tasks.
+
+### 5.3.2 Key Data (Placeholder)
+
+- Sequence steps and related identifiers (to be updated once you share columns)
+
+---
+
+# 6. Logs
+
+## 6.1 Purpose
+
+The **Logs** module provides traceability and auditability of operational and system events. It includes telemetry logs for machine/system signals and audit logs for user/system actions and changes. This module is essential for debugging, compliance, investigation, and activity history. Logs are presented as tables to support quick filtering and scanning over time.
+
+---
+
+## 6.2 Telemetry Logs Table
+
+### 6.2.1 Description
+
+The **Telemetry Logs Table** captures telemetry events or signals generated by machines or connected systems. This table helps users review time-based data events, detect abnormalities, and verify system inputs. It supports troubleshooting by providing a historical record of telemetry captured within HUMANIC. Telemetry logs enable transparency into what data was received and when.
+
+---
+
+## 6.3 Audit Logs Table
+
+### 6.3.1 Description
+
+The **Audit Logs Table** records user actions and significant system events for traceability. It helps track changes, identify who performed an action, and verify accountability within the platform. Audit logs are essential for governance and process compliance. This table supports investigations by presenting a chronological history of relevant actions.
+
+---
+
+# 7. MDE Screens
+
+## 7.1 Purpose
+
+The **MDE Screens** module provides interfaces for shopfloor data entry related to production and downtime. It includes separate screens for Production MDE and Downtime MDE to ensure data is captured in the correct operational context. These screens support accurate reporting by collecting structured inputs directly from production operations. The module acts as a bridge between real-time activities and analytical reports.
+
+---
+
+## 7.2 Production MDE
+
+### 7.2.1 Description
+
+The **Production MDE** screen is used to record production-related entries such as output updates, confirmations, or other production events. It ensures production data is captured in a consistent and standardized manner. This improves reliability of production reporting and progress tracking. The screen supports operational users by providing a focused interface specifically for production updates.
+
+> Share the fields/buttons/actions here and I’ll document them in detail.
+> 
+
+---
+
+## 7.3 Downtime MDE
+
+### 7.3.1 Description
+
+The **Downtime MDE** screen is used to record downtime events, reasons, and downtime-related operational information. It supports accurate downtime reporting by ensuring data is captured at the source. This improves analysis of downtime trends and helps identify recurring issues. The separation from production MDE keeps downtime data structured and easy to analyze.
+
+> Share the downtime reason structure, categories, and fields to make this section complete.
+> 
+
+---
+
+# 8. Reports
+
+## 8.1 Purpose
+
+The **Reports** module provides analytical views for production, downtime, and orders. Each report consolidates operational data into a summarized and structured format for performance tracking. Reports help stakeholders monitor KPIs, validate outcomes, and identify improvement opportunities. These reports are typically used for daily review, weekly analysis, and management summaries.
+
+---
+
+## 8.2 Production Report
+
+### 8.2.1 Description
+
+The **Production Report** provides summarized information about production output and performance. It helps users analyze production trends, compare actuals versus planned, and review productivity outcomes. This report supports both operational and management-level review. It is designed to convert raw production events into meaningful metrics.
+
+---
+
+## 8.3 Downtime Report
+
+### 8.3.1 Description
+
+The **Downtime Report** provides insights into downtime events, durations, and reasons. It supports analysis of production losses and highlights areas for corrective action. This report is useful for identifying recurring downtime patterns and evaluating improvement efforts. It transforms downtime entries from MDE into actionable operational intelligence.
+
+---
+
+## 8.4 Order Report
+
+### 8.4.1 Description
+
+The **Order Report** summarizes order performance, status, and related order-level outcomes. It helps users track completion, delays, and production alignment with plans. This report provides consolidated visibility across multiple orders over time. It supports planners and supervisors with data-driven order monitoring.
+
+---
+
+# 9. Information Needed From You (to finalize perfectly)
+
+To make this documentation **complete and highly chunkable for AI**, please send details in this format for each page/table:
+
+## For each Table
+
+- Table name
+- Column names + meaning (1 line each)
+- Filters (if any)
+- Actions (view/edit/export/download)
+- Sorting/pagination/search (yes/no)
+
+## For each Graph
+
+- Graph type (bar/line/stacked etc.)
+- X-axis and Y-axis
+- Filters/slicers
+- Tooltip values
+
+## For each Screen (MDE)
+
+- Fields (dropdowns, inputs)
+- Validation rules
+- Submit flow / buttons
+- Output/result after submit
